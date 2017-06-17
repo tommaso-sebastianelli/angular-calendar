@@ -1,0 +1,13 @@
+ts-cal {
+  box-sizing: border-box; }
+  ts-cal .ts-cal-container {
+    display: table; }
+
+.row, ts-cal .ts-cal-container .ts-cal-row-header, ts-cal .ts-cal-container .ts-cal-row {
+  display: table-row;
+  width: auto;
+  clear: both; }
+
+.cell, ts-cal .ts-cal-container .ts-cal-row-header .ts-cal-day-header, ts-cal .ts-cal-container .ts-cal-row .ts-cal-day {
+  display: table-cell;
+  width: 60px; }
