@@ -5,7 +5,7 @@
           date: '<'
         },
         require: {
-          parent: '^tsCalRow'
+          parent: '^tsCalWeek'
         },
         controller: function(){
           this.$onInit = function () {
@@ -17,11 +17,13 @@
 
             var e = this.start.add(1, 'd');
             this.end = new Date(e.getFullYear(), e.getMonth(), e.getDate(), 0, 0, 0);
-
+            this.isCurrentMonth = function(num){
+              return num === this.parent.parent.currentMonth;
+            }
             //this.events = (events) ? events : []; //array for storing events
           };
         },
-        template: '<span class="placeholder">{{$ctrl.monthDay}}</span>'
+        template: '<span class="ts-cal-placeholder" ng-class="{\'outside\' : !$ctrl.isCurrentMonth($ctrl.month)}">{{$ctrl.monthDay}}</span>'
       }
 
       angular

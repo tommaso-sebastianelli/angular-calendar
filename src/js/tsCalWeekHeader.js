@@ -17,6 +17,6 @@
 
   angular
       .module('tsCal')
-      .component('tsCalRowHeader', header)
+      .component('tsCalWeekHeader', header)
 
 })();

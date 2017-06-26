@@ -24,6 +24,6 @@
 
   angular
       .module('tsCal')
-      .component('tsCalRow', week)
+      .component('tsCalWeek', week)
 
 })();

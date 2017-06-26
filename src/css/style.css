@@ -1,13 +1,43 @@
 ts-cal {
-  box-sizing: border-box; }
+  font-family: roboto, sans-serif, arial !important;
+  box-sizing: border-box;
+  position: relative;
+  width: 590px;
+  height: 400px;
+  display: block; }
+  ts-cal .ts-cal-controls {
+    background: #00897B;
+    color: white;
+    height: 15%; }
+    ts-cal .ts-cal-controls .controls .control.center * {
+      margin: 0 5px;
+      font-size: 20px; }
+    ts-cal .ts-cal-controls .controls .control .today {
+      display: inline-block;
+      min-width: 150px; }
+    ts-cal .ts-cal-controls .controls .control .next, ts-cal .ts-cal-controls .controls .control .prev {
+      cursor: pointer; }
+    ts-cal .ts-cal-controls .controls .control.right, ts-cal .ts-cal-controls .controls .control.left {
+      width: 20%; }
   ts-cal .ts-cal-container {
-    display: table; }
+    height: 100%; }
+    ts-cal .ts-cal-container .ts-cal-week-header {
+      background: #009688;
+      color: white;
+      height: 10%; }
+    ts-cal .ts-cal-container .ts-cal-week .ts-cal-day .ts-cal-placeholder.outside {
+      color: grey; }
 
-.row, ts-cal .ts-cal-container .ts-cal-row-header, ts-cal .ts-cal-container .ts-cal-row {
+.table, ts-cal .ts-cal-controls, ts-cal .ts-cal-container {
+  display: table;
+  width: 100%; }
+
+.row, ts-cal .ts-cal-controls .controls, ts-cal .ts-cal-container .ts-cal-week-header, ts-cal .ts-cal-container .ts-cal-week {
   display: table-row;
   width: auto;
   clear: both; }
 
-.cell, ts-cal .ts-cal-container .ts-cal-row-header .ts-cal-day-header, ts-cal .ts-cal-container .ts-cal-row .ts-cal-day {
+.cell, ts-cal .ts-cal-controls .controls .control, ts-cal .ts-cal-container .ts-cal-week-header .ts-cal-day-header, ts-cal .ts-cal-container .ts-cal-week .ts-cal-day {
   display: table-cell;
-  width: 60px; }
+  text-align: center;
+  vertical-align: middle; }

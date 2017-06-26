@@ -1,23 +1,68 @@
 ts-cal{
+  font-family: roboto, sans-serif, arial !important;
   box-sizing: border-box;
+  position: relative;
+  //dynamic height and width
+  width:590px;
+  height: 400px;
+  display: block;
+  .ts-cal-controls{
+    @extend .table;
+    background: #00897B;
+    color:white;
+    height: 15%;
+    .controls{
+      @extend .row;
+      .control{
+        @extend .cell;
+        &.center *{
+          margin: 0 5px;
+        font-size: 20px;
+        }
+        .today{
+          display: inline-block;
+          min-width: 150px;
+        }
+        .next, .prev{
+          cursor: pointer;
+        }
 
-  .ts-cal-actions{}
+        &.right, &.left{
+          width:20%;
+        }
+      }
+    }
+  }
 
   .ts-cal-container{
-    display: table;
-    .ts-cal-row-header{
+    @extend .table;
+    height: 100%;
+    .ts-cal-week-header{
       @extend .row;
+      background: #009688;
+      color:white;
+      height: 10%;
       .ts-cal-day-header{
         @extend .cell;
       }
     }
-    .ts-cal-row{
+    .ts-cal-week{
       @extend .row;
       .ts-cal-day{
         @extend .cell;
+        .ts-cal-placeholder{
+          &.outside{
+            color: grey;;
+          }
+        }
       }
     }
   }
+}
+
+.table{
+  display: table;
+  width:100%;
 }
 
 .row{
@@ -27,5 +72,6 @@ ts-cal{
 }
 .cell{
   display:table-cell;
-  width:60px;
+  text-align: center;
+  vertical-align: middle;
 }
