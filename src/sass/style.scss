@@ -1,3 +1,5 @@
+@import 'icons.scss';
+
 ts-cal{
   font-family: roboto, sans-serif, arial !important;
   box-sizing: border-box;
@@ -19,7 +21,7 @@ ts-cal{
           margin: 0 5px;
         font-size: 20px;
         }
-        .today{
+        .current{
           display: inline-block;
           min-width: 150px;
         }

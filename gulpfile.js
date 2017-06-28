@@ -62,14 +62,14 @@ gulp.task('useref', function() {
 });
 
 gulp.task('distJS', function() {
-  return gulp.src('src/js/**/*.js')
+  return gulp.src(['src/js/**/*.js', '!src/js/app.js'])
     .pipe(concat('angular-calendar.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist'))
 });
 
 gulp.task('distCSS', function() {
-    return gulp.src('src/css/**/*.css')
+    return gulp.src(['src/css/**/*.css', '!src/css/credits.css'])
       .pipe(concat('angular-calendar.min.css'))
       .pipe(cssnano())
       .pipe(gulp.dest('dist'))

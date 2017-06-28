@@ -10,12 +10,12 @@
       '<span class="today"></span>' +
       '</li>'+
         '<li class="control center">'+
-        '<span class="prev fa fa-angle-left" ng-click="$ctrl.prev()"></span>' +
-        '<span class="today"> {{$ctrl.labels.months[$ctrl.currentMonth]}}</span>'+
-        '<span class="next fa fa-angle-right" ng-click="$ctrl.next()"></span>' +
+        '<span class="prev ri ri-arrow-left" ng-click="$ctrl.prev()"></span>' +
+        '<span class="current"> {{$ctrl.labels.months[$ctrl.currentMonth]}}</span>'+
+        '<span class="next ri ri-arrow-right" ng-click="$ctrl.next()"></span>' +
         '</li>'+
         '<li class="control right">'+
-        '<span class="today fa fa-calendar-o" ng-click="$ctrl.today()"></span>' +
+        '<span class="today ri ri-calendar" ng-click="$ctrl.today()"></span>' +
         '</li>'+
         '</ul>' +
         '</div>' +
@@ -30,7 +30,7 @@
     var self = this;
     this.labels = labels;
     self.currentMonth;
-    
+
     this.$onInit = function() {
       self.weeks = [];
       init();
@@ -73,7 +73,7 @@
   }
 
   angular
-    .module('tsCal')
+    .module('tsCal', [])
     .component('tsCal', cal);
 
 })();
