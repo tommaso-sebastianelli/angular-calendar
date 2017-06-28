@@ -13,6 +13,7 @@ var del = require('del');
 var runSequence = require('run-sequence');
 var rename = require("gulp-rename");
 var es = require("event-stream");
+var concat = require('gulp-concat');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -58,6 +59,20 @@ gulp.task('useref', function() {
     .pipe(gulpIf('*.js', uglify()))
     .pipe(gulpIf('*.css', cssnano()))
     .pipe(gulp.dest('demo'));
+});
+
+gulp.task('distJS', function() {
+  return gulp.src('src/js/**/*.js')
+    .pipe(concat('angular-calendar.js'))
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'))
+});
+
+gulp.task('distCSS', function() {
+    return gulp.src('src/css/**/*.css')
+      .pipe(concat('angular-calendar.min.css'))
+      .pipe(cssnano())
+      .pipe(gulp.dest('dist'))
 });
 
 // Optimizing Images
@@ -111,5 +126,9 @@ gulp.task('build', function(callback) {
 })
 
 gulp.task('distribute', function() {
-    'clean:dist'
+  runSequence(
+    'clean:dist',
+    'distJS',
+    'distCSS'
+  )
 });
