@@ -1,1 +1,1 @@
-angular.module('app', ['ngAnimate', 'tsCal']);
+angular.module('app', ['tsCal']);

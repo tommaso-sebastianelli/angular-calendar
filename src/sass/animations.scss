@@ -1,0 +1,18 @@
+
+.ts-cal-week{
+  .ng-leave{display: none;}
+  &.ng-enter {
+  animation: my_fade_animation 0.25s linear;
+  -webkit-animation: my_fade_animation 0.25s linear;
+}
+
+@keyframes my_fade_animation {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+
+@-webkit-keyframes my_fade_animation {
+  from { opacity:0; }
+  to { opacity:1; }
+}
+}

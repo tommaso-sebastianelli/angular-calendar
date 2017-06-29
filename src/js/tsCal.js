@@ -10,9 +10,9 @@
       '<span class="today"></span>' +
       '</li>'+
         '<li class="control center">'+
-        '<span class="prev ri ri-arrow-left" ng-click="$ctrl.prev()"></span>' +
+        '<span class="prev ri ri-arrow-left ripple" ng-click="$ctrl.prev()"></span>' +
         '<span class="current"> {{$ctrl.labels.months[$ctrl.currentMonth]}}</span>'+
-        '<span class="next ri ri-arrow-right" ng-click="$ctrl.next()"></span>' +
+        '<span class="next ri ri-arrow-right ripple" ng-click="$ctrl.next()"></span>' +
         '</li>'+
         '<li class="control right">'+
         '<span class="today ri ri-calendar" ng-click="$ctrl.today()"></span>' +
@@ -73,7 +73,7 @@
   }
 
   angular
-    .module('tsCal', [])
+    .module('tsCal', ['ngAnimate'])
     .component('tsCal', cal);
 
 })();
