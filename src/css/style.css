@@ -17,24 +17,66 @@
     background-size: 20px 20px;
     background-image: url(data:image/svg+xml;utf8;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iaXNvLTg4NTktMSI/Pgo8IS0tIEdlbmVyYXRvcjogQWRvYmUgSWxsdXN0cmF0b3IgMTkuMC4wLCBTVkcgRXhwb3J0IFBsdWctSW4gLiBTVkcgVmVyc2lvbjogNi4wMCBCdWlsZCAwKSAgLS0+CjxzdmcgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgdmVyc2lvbj0iMS4xIiBpZD0iTGF5ZXJfMSIgeD0iMHB4IiB5PSIwcHgiIHZpZXdCb3g9IjAgMCAzMzAgMzMwIiBzdHlsZT0iZW5hYmxlLWJhY2tncm91bmQ6bmV3IDAgMCAzMzAgMzMwOyIgeG1sOnNwYWNlPSJwcmVzZXJ2ZSIgd2lkdGg9IjEyOHB4IiBoZWlnaHQ9IjEyOHB4Ij4KPGcgaWQ9IlhNTElEXzE0XyI+Cgk8cGF0aCBpZD0iWE1MSURfMTVfIiBkPSJNMTUsMzMwaDMwMGM4LjI4NCwwLDE1LTYuNzE2LDE1LTE1VjQ1YzAtOC4yODQtNi43MTYtMTUtMTUtMTVoLTg1VjE1YzAtOC4yODQtNi43MTYtMTUtMTUtMTUgICBzLTE1LDYuNzE2LTE1LDE1djE1aC03MFYxNWMwLTguMjg0LTYuNzE2LTE1LTE1LTE1cy0xNSw2LjcxNi0xNSwxNXYxNUgxNUM2LjcxNiwzMCwwLDM2LjcxNiwwLDQ1djI3MEMwLDMyMy4yODQsNi43MTYsMzMwLDE1LDMzMHogICAgTTMwLDMwMFYxMjBoMjcwdjE4MEgzMHogTTMwMCw2MHYzMEgzMFY2MEgzMDB6IiBmaWxsPSIjRkZGRkZGIi8+Cgk8cGF0aCBpZD0iWE1MSURfMTlfIiBkPSJNMTk5LjM5NCwxNjkuMzk0TDE1MCwyMTguNzg3bC0xOS4zOTQtMTkuMzkzYy01Ljg1Ny01Ljg1OC0xNS4zNTUtNS44NTgtMjEuMjEzLDAgICBjLTUuODU4LDUuODU4LTUuODU4LDE1LjM1NSwwLDIxLjIxM2wzMCwzMEMxNDIuMzIyLDI1My41MzYsMTQ2LjE2MSwyNTUsMTUwLDI1NXM3LjY3OC0xLjQ2NCwxMC42MDYtNC4zOTRsNjAtNjAgICBjNS44NTgtNS44NTgsNS44NTgtMTUuMzU1LDAtMjEuMjEzQzIxNC43NDksMTYzLjUzNSwyMDUuMjUxLDE2My41MzUsMTk5LjM5NCwxNjkuMzk0eiIgZmlsbD0iI0ZGRkZGRiIvPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+CjxnPgo8L2c+Cjwvc3ZnPgo=); }
 
-.ts-cal-week .ng-leave {
-  display: none; }
-
-.ts-cal-week.ng-enter {
+.ts-cal-week {
+  /*
+.ng-leave{display: none;}
+  &.ng-enter {
   animation: my_fade_animation 0.25s linear;
-  -webkit-animation: my_fade_animation 0.25s linear; }
+  -webkit-animation: my_fade_animation 0.25s linear;
+}
 
 @keyframes my_fade_animation {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+  from { opacity:0; }
+  to { opacity:1; }
+}
 
 @-webkit-keyframes my_fade_animation {
-  from {
-    opacity: 0; }
-  to {
-    opacity: 1; } }
+  from { opacity:0; }
+  to { opacity:1; }
+}*/ }
+
+.example-animate-container {
+  background: white;
+  border: 1px solid black;
+  list-style: none;
+  margin: 0;
+  padding: 0 10px; }
+
+.animate-repeat {
+  list-style: none;
+  box-sizing: border-box; }
+
+.animate-repeat.ng-enter {
+  -webkit-transition: all linear 0.22s;
+  transition: all linear 0.22s;
+  opacity: 0;
+  max-height: 0; }
+
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity: 1;
+  max-height: 40px;
+  background-color: none; }
+
+.animate-repeat.ng-leave {
+  -webkit-transition: all linear 0.22s;
+  transition: all linear 0.22s;
+  opacity: 1;
+  max-height: 40px; }
+
+.animate-repeat.ng-leave.ng-leave-active {
+  opacity: 0;
+  max-height: 0; }
+
+.animate-repeat.ng-move {
+  -webkit-transition: all linear 0.22s;
+  transition: all linear 0.22s;
+  opacity: 0;
+  max-height: 0; }
+
+.animate-repeat.ng-move.ng-move-active {
+  opacity: 1;
+  max-height: 40px;
+  background-color: none; }
 
 ts-cal {
   font-family: roboto, sans-serif, arial !important;
@@ -44,38 +86,60 @@ ts-cal {
   height: 400px;
   display: block; }
   ts-cal .ts-cal-controls {
+    display: table;
+    width: 100%;
     background: #00897B;
     color: white;
     height: 15%; }
-    ts-cal .ts-cal-controls .controls .control.center * {
-      margin: 0 5px;
-      font-size: 20px; }
-    ts-cal .ts-cal-controls .controls .control .current {
-      display: inline-block;
-      min-width: 150px; }
-    ts-cal .ts-cal-controls .controls .control .next, ts-cal .ts-cal-controls .controls .control .prev {
-      cursor: pointer; }
-    ts-cal .ts-cal-controls .controls .control.right, ts-cal .ts-cal-controls .controls .control.left {
-      width: 20%; }
+    ts-cal .ts-cal-controls .controls {
+      display: table-row; }
+      ts-cal .ts-cal-controls .controls .control {
+        display: table-cell;
+        text-align: center;
+        vertical-align: middle; }
+        ts-cal .ts-cal-controls .controls .control.center * {
+          margin: 0 5px;
+          font-size: 20px; }
+        ts-cal .ts-cal-controls .controls .control .current {
+          display: inline-block;
+          min-width: 150px; }
+        ts-cal .ts-cal-controls .controls .control .next, ts-cal .ts-cal-controls .controls .control .prev {
+          cursor: pointer; }
+        ts-cal .ts-cal-controls .controls .control.right, ts-cal .ts-cal-controls .controls .control.left {
+          width: 20%; }
   ts-cal .ts-cal-container {
-    height: 100%; }
+    height: 75%;
+    position: relative; }
     ts-cal .ts-cal-container .ts-cal-week-header {
       background: #009688;
       color: white;
-      height: 10%; }
-    ts-cal .ts-cal-container .ts-cal-week .ts-cal-day .ts-cal-placeholder.outside {
-      color: grey; }
+      height: 11%; }
+      ts-cal .ts-cal-container .ts-cal-week-header .ts-cal-day-header {
+        display: table-cell;
+        position: relative; }
+    ts-cal .ts-cal-container .ts-cal-week {
+      height: 14.83333%; }
+      ts-cal .ts-cal-container .ts-cal-week .ts-cal-day .ts-cal-placeholder {
+        color: grey; }
+    ts-cal .ts-cal-container .ts-cal-ghost-align {
+      display: inline-block;
+      height: 100%;
+      width: 1px;
+      vertical-align: middle; }
 
-.table, ts-cal .ts-cal-controls, ts-cal .ts-cal-container {
-  display: table;
+.table, ts-cal .ts-cal-container {
+  display: block;
   width: 100%; }
 
-.row, ts-cal .ts-cal-controls .controls, ts-cal .ts-cal-container .ts-cal-week-header, ts-cal .ts-cal-container .ts-cal-week {
-  display: table-row;
+.row, ts-cal .ts-cal-container .ts-cal-week-header, ts-cal .ts-cal-container .ts-cal-week {
+  position: relative;
+  display: block;
   width: auto;
   clear: both; }
 
-.cell, ts-cal .ts-cal-controls .controls .control, ts-cal .ts-cal-container .ts-cal-week-header .ts-cal-day-header, ts-cal .ts-cal-container .ts-cal-week .ts-cal-day {
-  display: table-cell;
+.cell, ts-cal .ts-cal-container .ts-cal-week-header .ts-cal-day-header, ts-cal .ts-cal-container .ts-cal-week .ts-cal-day {
+  width: 14.28571%;
+  display: inline-block;
   text-align: center;
-  vertical-align: middle; }
+  vertical-align: middle;
+  height: 100%; }

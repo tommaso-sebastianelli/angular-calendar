@@ -1,6 +1,7 @@
 
 .ts-cal-week{
-  .ng-leave{display: none;}
+  /*
+.ng-leave{display: none;}
   &.ng-enter {
   animation: my_fade_animation 0.25s linear;
   -webkit-animation: my_fade_animation 0.25s linear;
@@ -14,5 +15,60 @@
 @-webkit-keyframes my_fade_animation {
   from { opacity:0; }
   to { opacity:1; }
+}*/
 }
+
+.example-animate-container {
+  background:white;
+  border:1px solid black;
+  list-style:none;
+  margin:0;
+  padding:0 10px;
+}
+
+.animate-repeat {
+  list-style:none;
+  box-sizing:border-box;
+}
+
+.animate-repeat.ng-enter {
+  -webkit-transition:all linear 0.22s;
+  transition:all linear 0.22s;
+  opacity:0;
+  max-height:0;
+  // background-color: lightgreen;
+}
+
+.animate-repeat.ng-enter.ng-enter-active {
+  opacity:1;
+  max-height:40px;
+  background-color: none;
+}
+
+.animate-repeat.ng-leave {
+  -webkit-transition:all linear 0.22s;
+  transition:all linear 0.22s;
+  opacity:1;
+  max-height:40px;
+  // background-color: pink;
+}
+
+.animate-repeat.ng-leave.ng-leave-active {
+  opacity:0;
+  max-height:0;
+  // background-color: pink;
+}
+
+.animate-repeat.ng-move {
+  -webkit-transition:all linear 0.22s;
+  transition:all linear 0.22s;
+  opacity:0;
+  max-height:0;
+  // background-color: lightblue;
+}
+
+.animate-repeat.ng-move.ng-move-active{
+  opacity:1;
+  max-height:40px;
+  background-color: none;
 }
