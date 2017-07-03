@@ -14,6 +14,7 @@ var runSequence = require('run-sequence');
 var rename = require("gulp-rename");
 var es = require("event-stream");
 var concat = require('gulp-concat');
+var depLinker = require('dep-linker');
 
 // Basic Gulp task syntax
 gulp.task('hello', function() {
@@ -62,17 +63,20 @@ gulp.task('useref', function() {
 });
 
 gulp.task('distJS', function() {
-  return gulp.src(['src/js/**/*.js', '!src/js/app.js'])
-    .pipe(concat('angular-calendar.js'))
+  return gulp.src(['src/js/**/*.js', '!src/js/app.js',
+      'src/libs/ng-scroll/ng-scroll.js',
+      '!src/libs/ng-scroll/src/**/*.js'
+    ])
+    .pipe(concat('angular-calendar.min.js'))
     .pipe(uglify())
     .pipe(gulp.dest('dist'))
 });
 
 gulp.task('distCSS', function() {
-    return gulp.src(['src/css/**/*.css', '!src/css/credits.css'])
-      .pipe(concat('angular-calendar.min.css'))
-      .pipe(cssnano())
-      .pipe(gulp.dest('dist'))
+  return gulp.src(['src/css/**/*.css', '!src/css/credits.css'])
+    .pipe(concat('angular-calendar.min.css'))
+    .pipe(cssnano())
+    .pipe(gulp.dest('dist'))
 });
 
 // Optimizing Images
@@ -91,6 +95,11 @@ gulp.task('fonts', function() {
     .pipe(gulp.dest('demo/fonts'))
 })
 
+//Pick node_modules from the backend
+gulp.task('link-dependencies', function() {
+  depLinker.linkDependenciesTo('src/libs');
+});
+
 // Cleaning
 gulp.task('clean', function() {
   return del.sync('demo').then(function(cb) {
@@ -106,11 +115,16 @@ gulp.task('clean:dist', function() {
   return del('dist/**/*');
 });
 
+gulp.task('clean:libs', function() {
+  return del('src/libs/**/*');
+});
+
 // Build Sequences
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence(['sass', 'browserSync'], 'watch',
+  runSequence('clean:libs', 'link-dependencies', ['sass', 'browserSync'],
+    'watch',
     callback
   )
 })
@@ -118,8 +132,7 @@ gulp.task('default', function(callback) {
 gulp.task('build', function(callback) {
   runSequence(
     'clean:demo',
-    'sass',
-    ['useref', 'images', 'fonts'],
+    'sass', ['useref', 'images', 'fonts'],
     'distribute',
     callback
   )

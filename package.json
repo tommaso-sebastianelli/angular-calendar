@@ -24,6 +24,7 @@
   "devDependencies": {
     "browser-sync": "^2.7.12",
     "del": "^2.0.2",
+    "dep-linker": "^1.0.24",
     "event-stream": "^3.3.4",
     "gulp": "^3.9.0",
     "gulp-autoprefixer": "^3.1.0",
@@ -39,7 +40,6 @@
     "run-sequence": "^1.1.2"
   },
   "dependencies": {
-    "ng-ripple": "^1.0.3",
-    "roboto-fontface": "^0.7.0"
+    "ng-scroll": "^1.0.4"
   }
 }
