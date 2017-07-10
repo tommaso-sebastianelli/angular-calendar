@@ -29,7 +29,7 @@
 
           }
           //this.events = (events) ? events : []; //array for storing events
-      };
+      }
     },
     template: '<span class="ts-cal-ghost-align"></span>' +
       '<span class="ts-cal-placeholder" ng-class="{\'outside\' : !$ctrl.isCurrentMonth($ctrl.month), \'today\' : $ctrl.isToday()}">{{$ctrl.monthDay}}</span>'

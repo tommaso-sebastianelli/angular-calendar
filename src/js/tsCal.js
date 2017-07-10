@@ -1,9 +1,26 @@
 (function() {
 
+  var labels = {
+    months: [
+      "January",
+      "February",
+      "March",
+      "April",
+      "May",
+      "June",
+      "July",
+      "August",
+      "September",
+      "October",
+      "November",
+      "December"
+    ]
+  };
+
   var cal = {
     bindings: {},
-    controller: ctrl,
-    template: function($element, $attrs) {
+    controller: ['$element', '$timeout', 'labels', ctrl],
+    template: function() {
       return '<div class="ts-cal-controls">' +
         '<ul class="controls">' +
         '<li class="control left">' +
@@ -36,7 +53,7 @@
     this.$onInit = function() {
       self.weeks = [];
       init();
-    };
+    }
 
     function Week(start) {
       this.date = start;
@@ -89,15 +106,16 @@
 
     self.today = function() {
       init();
-    };
+    }
     self.next = function() {
       var d = self.weeks[0].date;
       init(d.add(7, 'd').add(1, 'M'));
-    };
+    }
     self.prev = function() {
       var d = self.weeks[0].date;
       init(d.add(-7, 'd'));
-    };
+    }
+
 
     self.slideUp = function() {
       $timeout.cancel(self.t);
@@ -120,21 +138,22 @@
       }, 50);
     }
 
+
+
     self.defaultAnimation = function() {
       $element.removeClass('ts-cal-css-scroll');
       $element.addClass('ts-cal-css-fade');
-    };
+    }
 
     self.scrollAnimation = function() {
       $element.removeClass('ts-cal-css-fade');
       $element.addClass('ts-cal-css-scroll');
-    };
+    }
   }
 
   angular
     .module('tsCal', ['ngAnimate', 'ngScroll'])
-    .component('tsCal', cal);
-
-  cal.$inject = ['$element', '$timeout', 'labels'];
+    .constant('labels', labels)
+    .component('tsCal', cal)
 
 })();
