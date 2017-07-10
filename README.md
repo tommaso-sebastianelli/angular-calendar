@@ -15,6 +15,11 @@ A simple, light calendar component for AngularJs
 
 For the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-calendar/issues)
 
+## Requirements
+
+- AngularJs 1.5.1 (or newer)
+- Angular Animate 1.5.1 or (newer)
+
 ## Getting Started
 
 ### Get the package
@@ -39,7 +44,7 @@ angular.module('app', ['tsCal'])
 <script src="angular-calendar.min.js"></script>
 ```
 
-### Use 
+### Use
 ```
 <ts-cal></ts-cal>
 ```
