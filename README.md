@@ -6,11 +6,11 @@ A simple, light calendar component for AngularJs
 
 ## Features
 
-- Only Angular and Angular Animate Required (No Momentjs or JQuery needed)
+- Only Angular and Angular Animate Required (No Momentjs, JQuery or fonts needed)
 - Native Angular pure CSS Animations
 - Fully responsive behavior
-- Full Material design layout  
-- Extremely small plugin
+- Material design
+- Lightweight
 - More incoming
 
 For the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-calendar/issues)
