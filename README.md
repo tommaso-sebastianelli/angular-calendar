@@ -2,29 +2,58 @@
 
 A simple, light calendar component for AngularJs
 
-## Getting Started
+[Getting Started](https://github.com/angular-ui/ui-select/wiki/Getting-Started)
 
-These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+- [Demo](https://plnkr.co/edit/7eHoO3YeZzSSF3uUfpeS?p=preview)
 
-### Prerequisites
+## Features
 
-- NodeJs 6.11.0
-- Gulp 3.9.1
+- Only Angular and Angular Animate Required (No Momentjs or JQuery needed)
+- Native Angular pure CSS Animations
+- Fully responsive behavior
+- Full Material design layout  
+- Extremely small plugin
+- More incoming
 
-### Installing
+For the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-calendar/issues)
 
-Clone the repository and run from inside the folder project:
-<b>$ npm-install</b>  
+## Get
 
-## Deployment
+### npm
+```
+Coming soon
+```
+### manual
+```
+$ clone/download and import dist files
+```
+## Install
+```
+//app.js
+angular.module('app', ['tsCal'])
 
-Add additional notes about how to deploy this on a live system
+//index.html
+<link rel="stylesheet" href="angular-calendar.min.css" />
+<script src="angular-calendar.min.js"></script>
+```
 
-## Built With
+## Use
+```
+<ts-cal></ts-cal>
+```
 
-* [Dropwizard](http://www.dropwizard.io/1.0.2/docs/) - The web framework used
-* [Maven](https://maven.apache.org/) - Dependency Management
-* [ROME](https://rometools.github.io/rome/) - Used to generate RSS Feeds
+## Development
+
+### Prepare your environment
+* Install [Node.js](http://nodejs.org/) and NPM (should come with)
+* Install global dev dependencies: `npm install -g gulp`
+* Install local dev dependencies: `npm install` in repository directory
+
+### Development Commands
+
+* `gulp` to build and test
+* `gulp build` to build demo and distribute plugin files
+* `gulp dist` to distribute plugin files
 
 ## Authors
 
@@ -33,4 +62,3 @@ Add additional notes about how to deploy this on a live system
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
-
