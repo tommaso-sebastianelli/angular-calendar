@@ -2,8 +2,6 @@
 
 A simple, light calendar component for AngularJs
 
-[Getting Started](https://github.com/angular-ui/ui-select/wiki/Getting-Started)
-
 - [Demo](https://plnkr.co/edit/7eHoO3YeZzSSF3uUfpeS?p=preview)
 
 ## Features
@@ -17,27 +15,31 @@ A simple, light calendar component for AngularJs
 
 For the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-calendar/issues)
 
-## Get
+## Getting Started
 
-### npm
+### Get the package
+#### npm
 ```
 Coming soon
 ```
-### manual
+#### manual
 ```
 $ clone/download and import dist files
 ```
-## Install
-```
-//app.js
-angular.module('app', ['tsCal'])
+### Install
+#### app.js
 
-//index.html
+```
+angular.module('app', ['tsCal'])
+```
+
+#### index.html
+```
 <link rel="stylesheet" href="angular-calendar.min.css" />
 <script src="angular-calendar.min.js"></script>
 ```
 
-## Use
+### Use 
 ```
 <ts-cal></ts-cal>
 ```
@@ -57,7 +59,7 @@ angular.module('app', ['tsCal'])
 
 ## Authors
 
-* **Tommaso Sebastianelli** - *Initial work* - [PurpleBooth](https://github.com/tommaso-sebastianelli)
+* [Tommaso Sebastianelli](https://github.com/tommaso-sebastianelli)
 
 ## License
 
