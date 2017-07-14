@@ -28,9 +28,9 @@ For the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-
 Coming soon
 ```
 #### manual
-```
-$ clone/download and import dist files
-```
+
+clone/download and import dist files
+
 ### Install
 #### app.js
 
