@@ -53,12 +53,14 @@ ts-cal.ts-cal-css-scroll .animate-repeat.ng-enter {
   -webkit-transition: all linear 0.22s;
   transition: all linear 0.22s;
   opacity: 0;
-  max-height: 0; }
+  max-height: 0;
+  margin-top: 0; }
 
 ts-cal.ts-cal-css-scroll .animate-repeat.ng-enter.ng-enter-active {
   opacity: 1;
   max-height: 40px;
-  background-color: none; }
+  background-color: none;
+  margin-top: 40px; }
 
 ts-cal.ts-cal-css-scroll .animate-repeat.ng-leave {
   -webkit-transition: all linear 0.22s;
@@ -137,7 +139,8 @@ ts-cal {
           width: 20%; }
   ts-cal .ts-cal-container {
     height: 75%;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     ts-cal .ts-cal-container .ts-cal-week-header {
       background: #009688;
       color: white;

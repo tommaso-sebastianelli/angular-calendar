@@ -48,6 +48,7 @@ ts-cal{
     @extend .table;
     height: 75%;
     position: relative;
+    overflow: hidden;
     .ts-cal-week-header{
       @extend .raised-lvl-2;
       @extend .row;

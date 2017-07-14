@@ -47,6 +47,7 @@ ts-cal{
     transition:all linear 0.22s;
     opacity:0;
     max-height:0;
+    margin-top:0;
     // background-color: lightgreen;
   }
 
@@ -54,6 +55,7 @@ ts-cal{
     opacity:1;
     max-height:40px;
     background-color: none;
+    margin-top: 40px;
   }
 
   .animate-repeat.ng-leave {
