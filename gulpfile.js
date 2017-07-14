@@ -138,7 +138,7 @@ gulp.task('build', function(callback) {
   )
 })
 
-gulp.task('distribute', function() {
+gulp.task('dist', function() {
   runSequence(
     'clean:dist',
     'distJS',
