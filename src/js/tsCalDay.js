@@ -19,7 +19,7 @@
         this.end = new Date(e.getFullYear(), e.getMonth(), e.getDate(),
           0, 0, 0);
         this.isCurrentMonth = function(num) {
-          return num === this.parent.parent.currentMonth;
+          return num === this.parent.parent.currentTime.getMonth();
         }
         this.isToday = function() {
             var today = new Date();

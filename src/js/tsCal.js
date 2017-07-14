@@ -1,25 +1,8 @@
 (function() {
 
-  var labels = {
-    months: [
-      "January",
-      "February",
-      "March",
-      "April",
-      "May",
-      "June",
-      "July",
-      "August",
-      "September",
-      "October",
-      "November",
-      "December"
-    ]
-  };
-
   var cal = {
     bindings: {},
-    controller: ['$element', '$timeout', 'labels', ctrl],
+    controller: ['$element', '$timeout', ctrl],
     template: function() {
       return '<div class="ts-cal-controls">' +
         '<ul class="controls">' +
@@ -28,7 +11,7 @@
         '</li>' +
         '<li class="control center">' +
         '<span class="prev ripple ripple-light ri ri-arrow-left ripple" ng-click="$ctrl.prev()"></span>' +
-        '<span class="current"> {{$ctrl.labels.months[$ctrl.currentMonth]}}&nbsp;&nbsp;{{$ctrl.currentYear}}</span>' +
+        '<span class="current"> {{$ctrl.currentTime | date: \'MMMM\' }}&nbsp;&nbsp;{{$ctrl.currentTime | date : \'yyyy\'}}</span>' +
         '<span class="next ripple ripple-light ri ri-arrow-right ripple" ng-click="$ctrl.next()"></span>' +
         '</li>' +
         '<li class="control right">' +
@@ -37,15 +20,14 @@
         '</ul>' +
         '</div>' +
         '<div class="ts-cal-container" data-ng-scroll-up="$ctrl.slideUp()" data-ng-scroll-down="$ctrl.slideDown()" ng-mouseenter="$ctrl.scrollAnimation()" ng-mouseleave="$ctrl.defaultAnimation()">' +
-        '<ts-cal-week-header class="ts-cal-week-header"></ts-cal-week-header>' +
+        '<ts-cal-week-header class="ts-cal-week-header" date="$ctrl.weeks[0].date"></ts-cal-week-header>' +
         '<ts-cal-week class="ts-cal-week animate-repeat" ng-repeat="row in $ctrl.weeks" date="row.date"></ts-cal-week>' +
         '</div>'
     }
   };
 
-  function ctrl($element, $timeout, labels) {
+  function ctrl($element, $timeout) {
     var self = this;
-    this.labels = labels;
     self.currentMonth;
     self.currentYear;
     self.t;
@@ -83,15 +65,14 @@
     }
 
     self.updateCurrentTime = function() {
-      self.currentMonth = self.weeks[2].date.add(14, 'd').getMonth();
-      self.currentYear = self.weeks[2].date.add(14, 'd').getFullYear();
+      self.currentTime = self.weeks[4].date;
     }
 
     self.isCurrentMonth = function(num) {
       if (num)
-        return self.currentMonth === num;
+        return self.currentTime.getMonth() === num;
       else
-        return self.currentMonth === new Date().add(14, 'd').getMonth();
+        return self.currentTime.getMonth() === new Date().add(14, 'd').getMonth();
     }
 
     function getFirstDate(date) {
@@ -153,7 +134,6 @@
 
   angular
     .module('tsCal', ['ngAnimate', 'ngScroll'])
-    .constant('labels', labels)
     .component('tsCal', cal)
 
 })();

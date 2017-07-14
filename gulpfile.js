@@ -123,7 +123,7 @@ gulp.task('clean:libs', function() {
 // ---------------
 
 gulp.task('default', function(callback) {
-  runSequence('clean:libs', 'link-dependencies', ['sass', 'browserSync'],
+  runSequence('link-dependencies', ['sass', 'browserSync'],
     'watch',
     callback
   )
