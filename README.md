@@ -2,7 +2,7 @@
 
 A simple, light calendar component for AngularJs
 
-![alt text](angular-calendar/screenshots/02.gif)
+![alt text](https://github.com/tommaso-sebastianelli/angular-calendar/blob/master/screenshots/02.gif)
 
 - [Demo](https://plnkr.co/edit/7eHoO3YeZzSSF3uUfpeS?p=preview)
 
