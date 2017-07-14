@@ -13,6 +13,7 @@ ts-cal{
   display: block;
   .ts-cal-controls{
     @extend .raised-lvl-2;
+    @extend .noselect;
     display: table;
     width: 100%;
     background: #00897B;
@@ -57,6 +58,7 @@ ts-cal{
       height: 11%;
       .ts-cal-day-header{
         @extend .cell;
+        @extend .noselect;
         display: table-cell;
         position: relative;
       }
@@ -67,6 +69,7 @@ ts-cal{
       .ts-cal-day{
         @extend .cell;
         .ts-cal-placeholder{
+          @extend .noselect;
           &.today{
             padding: 10px;
             background: #ecf0f1;
@@ -116,4 +119,14 @@ ts-cal{
 
 .raised-lvl-2{
   box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+.noselect {
+  -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+     -khtml-user-select: none; /* Konqueror HTML */
+       -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* Internet Explorer/Edge */
+            user-select: none; /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */
 }

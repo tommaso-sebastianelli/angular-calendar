@@ -188,3 +188,18 @@ ts-cal {
 
 .raised-lvl-2, ts-cal .ts-cal-controls, ts-cal .ts-cal-container .ts-cal-week-header {
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23); }
+
+.noselect, ts-cal .ts-cal-controls, ts-cal .ts-cal-container .ts-cal-week-header .ts-cal-day-header, ts-cal .ts-cal-container .ts-cal-week .ts-cal-day .ts-cal-placeholder {
+  -webkit-touch-callout: none;
+  /* iOS Safari */
+  -webkit-user-select: none;
+  /* Safari */
+  -khtml-user-select: none;
+  /* Konqueror HTML */
+  -moz-user-select: none;
+  /* Firefox */
+  -ms-user-select: none;
+  /* Internet Explorer/Edge */
+  user-select: none;
+  /* Non-prefixed version, currently
+                                  supported by Chrome and Opera */ }
