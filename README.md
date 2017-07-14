@@ -7,8 +7,9 @@ A simple, light calendar component for AngularJs
 ## Features
 
 - Only Angular and Angular Animate Required (No Momentjs, JQuery or fonts needed)
-- Native Angular pure CSS Animations
+- Native Angular CSS Animations
 - Fully responsive behavior
+- Angular l18n date support
 - Material design
 - Lightweight
 - More incoming
@@ -29,7 +30,7 @@ Coming soon
 ```
 #### manual
 
-clone/download and import dist files
+- git clone or download and import dist files
 
 ### Install
 #### app.js
