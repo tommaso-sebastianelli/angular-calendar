@@ -131,6 +131,7 @@ gulp.task('default', function(callback) {
 
 gulp.task('build', function(callback) {
   runSequence(
+    'link-dependencies',
     'clean:demo',
     'sass', ['useref', 'images', 'fonts'],
     'distribute',
