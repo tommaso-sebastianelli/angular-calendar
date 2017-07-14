@@ -1,0 +1,130 @@
+0 info it worked if it ends with ok
+1 verbose cli [ '/home/tommaso/.nvm/versions/node/v6.11.0/bin/node',
+1 verbose cli   '/home/tommaso/.nvm/versions/node/v6.11.0/bin/npm',
+1 verbose cli   'publish' ]
+2 info using npm@3.10.10
+3 info using node@v6.11.0
+4 verbose publish [ '.' ]
+5 silly cache add args [ '.', null ]
+6 verbose cache add spec .
+7 silly cache add parsed spec Result {
+7 silly cache add   raw: '.',
+7 silly cache add   scope: null,
+7 silly cache add   escapedName: null,
+7 silly cache add   name: null,
+7 silly cache add   rawSpec: '.',
+7 silly cache add   spec: '/home/tommaso/Projects/angular-calendar',
+7 silly cache add   type: 'directory' }
+8 verbose addLocalDirectory /home/tommaso/.npm/@tommaso-sebastianelli/angular-calendar/1.0.0/package.tgz not in flight; packing
+9 verbose correctMkdir /home/tommaso/.npm correctMkdir not in flight; initializing
+10 info lifecycle @tommaso-sebastianelli/angular-calendar@1.0.0~prepublish: @tommaso-sebastianelli/angular-calendar@1.0.0
+11 silly lifecycle @tommaso-sebastianelli/angular-calendar@1.0.0~prepublish: no script for prepublish, continuing
+12 verbose tar pack [ '/home/tommaso/.npm/@tommaso-sebastianelli/angular-calendar/1.0.0/package.tgz',
+12 verbose tar pack   '/home/tommaso/Projects/angular-calendar' ]
+13 verbose tarball /home/tommaso/.npm/@tommaso-sebastianelli/angular-calendar/1.0.0/package.tgz
+14 verbose folder /home/tommaso/Projects/angular-calendar
+15 verbose addLocalTarball adding from inside cache /home/tommaso/.npm/@tommaso-sebastianelli/angular-calendar/1.0.0/package.tgz
+16 verbose correctMkdir /home/tommaso/.npm correctMkdir not in flight; initializing
+17 silly cache afterAdd @tommaso-sebastianelli/angular-calendar@1.0.0
+18 verbose afterAdd /home/tommaso/.npm/@tommaso-sebastianelli/angular-calendar/1.0.0/package/package.json not in flight; writing
+19 verbose correctMkdir /home/tommaso/.npm correctMkdir not in flight; initializing
+20 verbose afterAdd /home/tommaso/.npm/@tommaso-sebastianelli/angular-calendar/1.0.0/package/package.json written
+21 silly publish { name: '@tommaso-sebastianelli/angular-calendar',
+21 silly publish   version: '1.0.0',
+21 silly publish   description: 'AngularJS Calendar',
+21 silly publish   main: 'angular-calendar.js',
+21 silly publish   scripts: { test: 'echo "Error: no test specified" && exit 1' },
+21 silly publish   repository:
+21 silly publish    { type: 'git',
+21 silly publish      url: 'git+https://github.com/tommaso-sebastianelli/angular-calendar.git' },
+21 silly publish   keywords: [ 'angularJs', 'angular', 'calendar' ],
+21 silly publish   author: { name: 'Tommaso Sebastianelli' },
+21 silly publish   license: 'MIT',
+21 silly publish   bugs: { url: 'https://github.com/tommaso-sebastianelli/angular-calendar/issues' },
+21 silly publish   homepage: 'https://github.com/tommaso-sebastianelli/angular-calendar#readme',
+21 silly publish   devDependencies:
+21 silly publish    { 'browser-sync': '^2.7.12',
+21 silly publish      del: '^2.0.2',
+21 silly publish      'dep-linker': '^1.0.24',
+21 silly publish      'event-stream': '^3.3.4',
+21 silly publish      gulp: '^3.9.0',
+21 silly publish      'gulp-autoprefixer': '^3.1.0',
+21 silly publish      'gulp-cache': '^0.4.1',
+21 silly publish      'gulp-concat': '^2.6.1',
+21 silly publish      'gulp-cssnano': '^2.1.0',
+21 silly publish      'gulp-if': '^2.0.0',
+21 silly publish      'gulp-imagemin': '^2.3.0',
+21 silly publish      'gulp-sass': '^3.0.0',
+21 silly publish      'gulp-sourcemaps': '^1.5.2',
+21 silly publish      'gulp-uglify': '^1.2.0',
+21 silly publish      'gulp-useref': '^3.0.4',
+21 silly publish      'run-sequence': '^1.1.2' },
+21 silly publish   dependencies: { 'ng-scroll': '^1.0.4' },
+21 silly publish   readme: '# Angular Calendar\n\nA simple, light calendar component for AngularJs\n\n- [Demo](https://plnkr.co/edit/7eHoO3YeZzSSF3uUfpeS?p=preview)\n\n## Features\n\n- Only Angular and Angular Animate Required (No Momentjs, JQuery or fonts needed)\n- Native Angular CSS Animations\n- Fully responsive behavior\n- Angular l18n date support\n- Material design\n- Lightweight\n- More incoming\n\nFor the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-calendar/issues)\n\n## Requirements\n\n- AngularJs 1.5.1 (or newer)\n- Angular Animate 1.5.1 or (newer)\n\n## Getting Started\n\n### Get the package\n#### npm\n```\nComing soon\n```\n#### manual\n\n- git clone or download and import dist files\n\n### Install\n#### app.js\n\n```\nangular.module(\'app\', [\'tsCal\'])\n```\n\n#### index.html\n```\n<link rel="stylesheet" href="angular-calendar.min.css" />\n<script src="angular-calendar.min.js"></script>\n```\n\n### Use\n```\n<ts-cal></ts-cal>\n```\n\n## Development\n\n### Prepare your environment\n* Install [Node.js](http://nodejs.org/) and NPM (should come with)\n* Install global dev dependencies: `npm install -g gulp`\n* Install local dev dependencies: `npm install` in repository directory\n\n### Development Commands\n\n* `gulp` to build and test\n* `gulp build` to build demo and distribute plugin files\n* `gulp dist` to distribute plugin files\n\n## Authors\n\n* [Tommaso Sebastianelli](https://github.com/tommaso-sebastianelli)\n\n## License\n\nThis project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details\n',
+21 silly publish   readmeFilename: 'README.md',
+21 silly publish   gitHead: '45ce2046b9d0102ce0d4acaa73514005ff8daa6e',
+21 silly publish   _id: '@tommaso-sebastianelli/angular-calendar@1.0.0',
+21 silly publish   _shasum: '6ddf7cd1a8b6ab34bc5f80d7330b0e31f3f91161',
+21 silly publish   _from: '.' }
+22 verbose getPublishConfig undefined
+23 silly mapToRegistry name @tommaso-sebastianelli/angular-calendar
+24 silly mapToRegistry scope (from package name) @tommaso-sebastianelli
+25 verbose mapToRegistry no registry URL found in name for scope @tommaso-sebastianelli
+26 silly mapToRegistry scope (from config) @username
+27 verbose mapToRegistry no registry URL found in config for scope @username
+28 silly mapToRegistry using default registry
+29 silly mapToRegistry registry https://registry.npmjs.org/
+30 silly mapToRegistry data Result {
+30 silly mapToRegistry   raw: '@tommaso-sebastianelli/angular-calendar',
+30 silly mapToRegistry   scope: '@tommaso-sebastianelli',
+30 silly mapToRegistry   escapedName: '@tommaso-sebastianelli%2fangular-calendar',
+30 silly mapToRegistry   name: '@tommaso-sebastianelli/angular-calendar',
+30 silly mapToRegistry   rawSpec: '',
+30 silly mapToRegistry   spec: 'latest',
+30 silly mapToRegistry   type: 'tag' }
+31 silly mapToRegistry uri https://registry.npmjs.org/@tommaso-sebastianelli%2fangular-calendar
+32 verbose publish registryBase https://registry.npmjs.org/
+33 silly publish uploading /home/tommaso/.npm/@tommaso-sebastianelli/angular-calendar/1.0.0/package.tgz
+34 verbose request uri https://registry.npmjs.org/@tommaso-sebastianelli%2fangular-calendar
+35 verbose request sending authorization for write operation
+36 info attempt registry request try #1 at 11:19:37 PM
+37 verbose request using bearer token for auth
+38 verbose request id 68b42dd819dd252d
+39 http request PUT https://registry.npmjs.org/@tommaso-sebastianelli%2fangular-calendar
+40 http 402 https://registry.npmjs.org/@tommaso-sebastianelli%2fangular-calendar
+41 verbose headers { 'content-type': 'application/json',
+41 verbose headers   'cache-control': 'max-age=0',
+41 verbose headers   'content-length': '119',
+41 verbose headers   'accept-ranges': 'bytes',
+41 verbose headers   date: 'Fri, 14 Jul 2017 21:19:43 GMT',
+41 verbose headers   via: '1.1 varnish',
+41 verbose headers   connection: 'keep-alive',
+41 verbose headers   'x-served-by': 'cache-hhn1532-HHN',
+41 verbose headers   'x-cache': 'MISS',
+41 verbose headers   'x-cache-hits': '0',
+41 verbose headers   'x-timer': 'S1500067178.514828,VS0,VE6281' }
+42 verbose request invalidating /home/tommaso/.npm/registry.npmjs.org/_40tommaso-sebastianelli_252fangular-calendar on PUT
+43 error publish Failed PUT 402
+44 verbose stack Error: You need a paid account to perform this action. For more info, visit: https://www.npmjs.com/private-modules : @tommaso-sebastianelli/angular-calendar
+44 verbose stack     at makeError (/home/tommaso/.nvm/versions/node/v6.11.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:302:12)
+44 verbose stack     at CachingRegistryClient.<anonymous> (/home/tommaso/.nvm/versions/node/v6.11.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:290:14)
+44 verbose stack     at Request._callback (/home/tommaso/.nvm/versions/node/v6.11.0/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:210:14)
+44 verbose stack     at Request.self.callback (/home/tommaso/.nvm/versions/node/v6.11.0/lib/node_modules/npm/node_modules/request/request.js:187:22)
+44 verbose stack     at emitTwo (events.js:106:13)
+44 verbose stack     at Request.emit (events.js:191:7)
+44 verbose stack     at Request.<anonymous> (/home/tommaso/.nvm/versions/node/v6.11.0/lib/node_modules/npm/node_modules/request/request.js:1048:10)
+44 verbose stack     at emitOne (events.js:96:13)
+44 verbose stack     at Request.emit (events.js:188:7)
+44 verbose stack     at IncomingMessage.<anonymous> (/home/tommaso/.nvm/versions/node/v6.11.0/lib/node_modules/npm/node_modules/request/request.js:969:12)
+45 verbose statusCode 402
+46 verbose pkgid @tommaso-sebastianelli/angular-calendar
+47 verbose cwd /home/tommaso/Projects/angular-calendar
+48 error Linux 4.8.0-58-generic
+49 error argv "/home/tommaso/.nvm/versions/node/v6.11.0/bin/node" "/home/tommaso/.nvm/versions/node/v6.11.0/bin/npm" "publish"
+50 error node v6.11.0
+51 error npm  v3.10.10
+52 error code E402
+53 error You need a paid account to perform this action. For more info, visit: https://www.npmjs.com/private-modules : @tommaso-sebastianelli/angular-calendar
+54 error If you need help, you may report this error at:
+54 error     <https://github.com/npm/npm/issues>
+55 verbose exit [ 1, true ]

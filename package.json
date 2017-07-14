@@ -1,5 +1,5 @@
 {
-  "name": "angular-calendar",
+  "name": "@tommaso-sebastianelli/angular-calendar",
   "version": "1.0.0",
   "description": "AngularJS Calendar",
   "main": "angular-calendar.js",
