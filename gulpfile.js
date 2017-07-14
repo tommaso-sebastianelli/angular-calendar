@@ -134,7 +134,6 @@ gulp.task('build', function(callback) {
     'link-dependencies',
     'clean:demo',
     'sass', ['useref', 'images', 'fonts'],
-    'distribute',
     callback
   )
 })
