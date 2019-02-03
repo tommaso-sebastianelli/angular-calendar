@@ -14,7 +14,6 @@ A simple, light calendar component for AngularJs
 - Angular l18n date support
 - Material design
 - Lightweight
-- More incoming
 
 For the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-calendar/issues)
 
@@ -25,14 +24,6 @@ For the roadmap, check [issue](https://github.com/tommaso-sebastianelli/angular-
 
 ## Getting Started
 
-### Get the package
-#### npm
-```
-Coming soon
-```
-#### manual
-
-- git clone or download and import dist files
 
 ### Install
 #### app.js
